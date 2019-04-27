@@ -1,3 +1,11 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  scope '/api/v1' do
+    resources :currency_pairs, only: [:index, :create, :destroy]
+    resources :exchange_rates, only: [:create] do
+      collection do
+        get 'trend'
+        get 'track'
+      end
+    end
+  end
 end
