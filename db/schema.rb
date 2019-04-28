@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_26_114029) do
+ActiveRecord::Schema.define(version: 2019_04_28_040356) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2019_04_26_114029) do
     t.string "to"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["from", "to"], name: "index_currency_pairs_on_from_and_to", unique: true
   end
 
   create_table "exchange_rates", force: :cascade do |t|
