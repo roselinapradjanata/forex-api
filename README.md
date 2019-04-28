@@ -2,8 +2,9 @@
 
 Set of APIs to store and display foreign exchange rate for currencies on a daily basis.
 
-Database Design: http://bit.ly/forex-api-db
-Documentation: http://bit.ly/forex-api-swagger
+- Database Design: http://bit.ly/forex-api-db
+
+- Documentation: http://bit.ly/forex-api-swagger
 
 ## Run
 ```shell
